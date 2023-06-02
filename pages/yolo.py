@@ -3,7 +3,7 @@ from ultralytics import YOLO
 import torch
 from torchvision import transforms
 from PIL import Image
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 
 #input_file = st.file_uploader("Загрузите картинку",type=["png", "jpg", "jpeg"])
@@ -25,7 +25,7 @@ def main():
         #st.image(image, caption="Uploaded Image", use_column_width=True)
         
         #img_tensor = preprocess_image(image)
-        fig, ax = plt.subplots()
+        fig, ax = plt.subplots(1)
         plt.axis('off')
         ax.imshow(results.render()[0])
         st.pyplot(fig)
