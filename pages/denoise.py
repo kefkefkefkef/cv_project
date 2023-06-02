@@ -9,7 +9,7 @@ from PIL import ImageEnhance
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
-path = '/home/kef/cv_project/denoise.pth' #local
+path = 'denoise.pth' #local
 
 def denoise_image2(image):
     # Загрузка модели и весов
