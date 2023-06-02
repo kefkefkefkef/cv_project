@@ -69,7 +69,7 @@ Ivan Nikiforov: Wind turbine detection.
 Veronika Krasikova: Document denoising using an autoencoder.
 
 - Model: Convolutional Neural Network
-- Training Data: Denoising Dirty Documents dataset
+- Training Data: [Denoising Dirty Documents](https://www.kaggle.com/c/denoising-dirty-documents/data) dataset
 
 **Result**
 
