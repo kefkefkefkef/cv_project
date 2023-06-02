@@ -25,7 +25,7 @@
 Иван Никифоров: Детекция ветрогенераторов.
 
 - модель: YOLO v8
-- данные для обучения: индивидуальный датасет с собственной разметкой
+- данные для обучения: датасет [Object Detection Dataset](https://www.kaggle.com/datasets/kylegraupe/wind-turbine-image-dataset-for-computer-vision)
 
 Вероника Красикова: Очищение документов от шумов с помощью автоэнкодера.
 
@@ -64,12 +64,12 @@ Anna Savitskaya and Osana Babayan: Generating specified digits using Conditional
 Ivan Nikiforov: Wind turbine detection.
 
 - Model: YOLO v8
-- Training Data: Custom dataset with manual annotations
+- Training Data: [Object Detection Dataset](https://www.kaggle.com/datasets/kylegraupe/wind-turbine-image-dataset-for-computer-vision) dataset
 
 Veronika Krasikova: Document denoising using an autoencoder.
 
 - Model: Convolutional Neural Network
-- Training Data: Denoising Dirty Documents dataset
+- Training Data: [Denoising Dirty Documents](https://www.kaggle.com/c/denoising-dirty-documents/data) dataset
 
 **Result**
 
