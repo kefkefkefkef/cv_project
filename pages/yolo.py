@@ -20,7 +20,9 @@ def main():
     if uploaded_file is not None:
         
         image = Image.open(uploaded_file)
+        st.image(image)
         results = model.predict(source=image)
+        #results = model.predict(source='pexels-kindel-media-9889060_jpg.rf.8f4dc6d892c47f44f650f25d56b97880.jpg')
 
         #st.image(image, caption="Uploaded Image", use_column_width=True)
         
