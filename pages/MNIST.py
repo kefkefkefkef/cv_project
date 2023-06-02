@@ -9,6 +9,9 @@ from torchvision import transforms as T
 from tqdm.notebook import tqdm
 import torch.nn.functional as F
 # Заголовок и выбор цифры пользователем
+image = Image.open('digits.png')
+
+st.image(image)
 st.title("MNIST Conditional GAN")
 
 latent_size=100
@@ -47,7 +50,7 @@ class Generator(nn.Module):
 generator=Generator(latent_size, num_classes,image_size)  
 #Загрузка весов
 
-generator.load_state_dict(torch.load('cgan-MNIST-Gen-Dis-50epoch-0.0001-0.001-0.5-0.5-128-100.pth',map_location=torch.device('cpu')))
+generator.load_state_dict(torch.load('cgan-MNIST-Gen-Dis-90epoch-0.0001-0.001-0.5-0.5-128-100.pth',map_location=torch.device('cpu')))
 
 generator.eval()
 selected_number = st.slider("Выберите число", min_value=0, max_value=9, step=1, value=3)
@@ -58,10 +61,15 @@ with torch.no_grad():
     generated_image = generator(latent_vector, label_tensor).squeeze().cpu().numpy()
 
 # Преобразование изображения в объект Image и вывод
-generated_image = (generated_image*255).astype("uint8")
+generated_image=(generated_image - generated_image.min()) / (generated_image.max() - generated_image.min())
+generated_image = (generated_image*255).astype('uint8')
 generated_image = Image.fromarray(generated_image)
 # Вывод картинки в оттенках серого
 st.image(generated_image, caption=f"Generated {label_dict[selected_number]}")
 
+# # Преобразование в объект Image
+# selected_img_pil = Image.fromarray(selected_img.cpu().detach().numpy(), mode='L')
 
+# # Отображение изображения в Streamlit
+# st.image(selected_img_pil, caption='Selected Image', use_column_width=True)
 
