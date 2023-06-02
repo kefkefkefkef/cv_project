@@ -1,13 +1,10 @@
 import streamlit as st
 from ultralytics import YOLO
 import torch
-from torchvision import transforms
+from torchvision import transforms as T
 from PIL import Image
 import matplotlib.pyplot as plt
-
-
-#input_file = st.file_uploader("Загрузите картинку",type=["png", "jpg", "jpeg"])
-
+import numpy as np
 
 
 def main():
@@ -21,11 +18,8 @@ def main():
         
         image = Image.open(uploaded_file)
         st.image(image)
-        st.image(model.predict(source=image))
-        #results = model.predict(source='pexels-kindel-media-9889060_jpg.rf.8f4dc6d892c47f44f650f25d56b97880.jpg', show=True)
-
-        #st.image(image, caption="Uploaded Image", use_column_width=True)
-        #img_tensor = preprocess_image(image)
+        results = model.predict(source=image)
+        st.image(results[0].plot())
 
 
 if __name__ == '__main__':
