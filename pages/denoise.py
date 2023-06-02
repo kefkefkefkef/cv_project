@@ -9,7 +9,7 @@ from PIL import ImageEnhance
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
-path = '/home/nika/ds-phase-2/09-cv/denoise.pth' #local
+path = '/home/kef/cv_project/denoise.pth' #local
 
 def denoise_image2(image):
     # Загрузка модели и весов
@@ -34,7 +34,7 @@ def denoise_image2(image):
         nn.BatchNorm2d(1),
         nn.Sigmoid()
     )
-    model.load_state_dict(torch.load(path))
+    model.load_state_dict(torch.load(path, map_location=device))
     model = model.to(device)
     model.eval()
 
