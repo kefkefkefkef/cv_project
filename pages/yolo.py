@@ -21,7 +21,7 @@ def main():
         
         image = Image.open(uploaded_file)
         st.image(image)
-        st.image(model.predict(source=image, show=True))
+        st.image(model.predict(source=image))
         #results = model.predict(source='pexels-kindel-media-9889060_jpg.rf.8f4dc6d892c47f44f650f25d56b97880.jpg', show=True)
 
         #st.image(image, caption="Uploaded Image", use_column_width=True)
