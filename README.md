@@ -58,18 +58,18 @@ These capabilities allow users to perform various image operations, enhancing th
 
 Anna Savitskaya and Osana Babayan: Generating specified digits using Conditional GAN.
 
-    - Model:
-    - Training Data: MNIST dataset
+- Model:
+- Training Data: MNIST dataset
 
 Ivan Nikiforov: Wind turbine detection.
 
-    - Model: YOLO v8
-    - Training Data: Custom dataset with manual annotations
+- Model: YOLO v8
+- Training Data: Custom dataset with manual annotations
 
 Veronika Krasikova: Document denoising using an autoencoder.
 
-    - Model: Convolutional Neural Network
-    - Training Data: Denoising Dirty Documents dataset
+- Model: Convolutional Neural Network
+- Training Data: Denoising Dirty Documents dataset
 
 **Result**
 
