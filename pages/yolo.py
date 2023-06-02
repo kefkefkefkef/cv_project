@@ -20,7 +20,7 @@ def main():
         model = YOLO("8n_50epochs.pt")
     elif option == '100':
         model = YOLO("8n_100epochs.pt")
-    else:
+    elif option == '200':
         model = YOLO("8n_200epochs.pt")
 
 
