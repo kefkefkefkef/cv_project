@@ -20,7 +20,7 @@ def main():
     if uploaded_file is not None:
         
         image = Image.open(uploaded_file)
-        #results = model.predict(source=image)
+        results = model.predict(source=image)
 
         #st.image(image, caption="Uploaded Image", use_column_width=True)
         
@@ -31,5 +31,6 @@ def main():
         st.pyplot(fig)
 
 
-
+if __name__ == '__main__':
+    main()
 
