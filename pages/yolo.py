@@ -21,16 +21,16 @@ def main():
         
         image = Image.open(uploaded_file)
         st.image(image)
-        results = model.predict(source=image, show=True)
+        results = model.predict(source=image)
         #results = model.predict(source='pexels-kindel-media-9889060_jpg.rf.8f4dc6d892c47f44f650f25d56b97880.jpg')
 
         #st.image(image, caption="Uploaded Image", use_column_width=True)
         #img_tensor = preprocess_image(image)
-        # fig, ax = plt.subplots()
-        # plt.axis('off')
+        fig, ax = plt.subplots()
+        plt.axis('off')
         
-        # ax.imshow(results.render()[0])
-        # st.pyplot(fig)
+        ax.imshow(results.render()[0])
+        st.pyplot(fig)
 
 
 if __name__ == '__main__':
