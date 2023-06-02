@@ -34,7 +34,7 @@
 
 **Результат**
 
-[название приложения](ссылка на него)
+[Faster Image Master](https://kefkefkefkef-cv-project-main-app-s65e57.streamlit.app/)
 
 ***********
 ***********
@@ -73,4 +73,4 @@ Veronika Krasikova: Document denoising using an autoencoder.
 
 **Result**
 
-[название приложения](ссылка на него)
+[Faster Image Master](https://kefkefkefkef-cv-project-main-app-s65e57.streamlit.app/)
